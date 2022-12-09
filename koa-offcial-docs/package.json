@@ -1,0 +1,18 @@
+{
+    "name": "short20-koa",
+    "version": "1.0.0",
+    "main": "main.js",
+    "type": "module",
+    "repository": "https://github.com/shh26b/short20-koa.git",
+    "author": "Shihab Mahamud <shihab4t@gmail.com>",
+    "license": "MIT",
+    "scripts": {
+        "dev": "nodemon ./src/main.js"
+    },
+    "dependencies": {
+        "koa": "^2.13.4"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.20"
+    }
+}
