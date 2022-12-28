@@ -1,0 +1,29 @@
+version: "3.3"
+services:
+    mongodb_service:
+        image: mongo
+        container_name: mongodb_container
+        networks:
+            - internal_network
+        volumes:
+            - mongo_data:/data/db
+    parcel_koi_service:
+        build: .
+        container_name: parcel_koi_container
+        ports:
+            - "3000:3000"
+        volumes:
+            - "parcel_koi_data:/user/share/parcel_koi/data"
+        networks:
+            - internal_network
+        environment:
+            - ENV=debug
+            - DB_URI=mongodb://mongodb_service:27017/parcel-koi-dump
+        depends_on:
+            - mongodb_service
+networks:
+    internal_network:
+        driver: bridge
+volumes:
+    parcel_koi_data:
+    mongo_data:
