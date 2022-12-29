@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>File upload with Express</title>
+</head>
+
+<body>
+    <h2>Single</h2>
+    <form action="http://localhost:3000/single" method="post" enctype="multipart/form-data">
+        <input type="file" name="avatar">
+        <input type="submit" value="Submit">
+    </form>
+
+    <h2>Multiple</h2>
+    <form action="http://localhost:3000/multiple" method="post" enctype="multipart/form-data">
+        <input type="file" name="avatar" multiple>
+        <input type="submit" value="Submit">
+    </form>
+
+    <h2>Many</h2>
+    <form action="http://localhost:3000/many" method="post" enctype="multipart/form-data">
+        <input type="file" name="avatar" multiple>
+        <input type="file" name="gallery" multiple>
+        <input type="submit" value="Submit">
+    </form>
+
+    <h2>None File</h2>
+    <form action="http://localhost:3000/nonfile" method="post" enctype="multipart/form-data">
+        <input type="text" name="name">
+        <input type="submit" value="Submit">
+    </form>
+
+    <h2>PDF File</h2>
+    <form action="http://localhost:3000/doc" method="post" enctype="multipart/form-data">
+        <input type="file" name="avatar">
+        <input type="file" name="doc">
+        <input type="submit" value="Submit">
+    </form>
+</body>
+
+</html>
