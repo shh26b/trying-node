@@ -1,0 +1,26 @@
+{
+    "name": "the-complete-node.js-course",
+    "version": "1.0.0",
+    "main": "index.js",
+    "license": "MIT",
+    "scripts": {
+        "start:dev": "nodemon ./index.js"
+    },
+    "dependencies": {
+        "config": "^3.3.7",
+        "debug": "^4.3.4",
+        "express": "^4.18.1",
+        "helmet": "^5.0.2",
+        "joi": "^13.7.0",
+        "mongoose": "^6.3.4",
+        "morgan": "^1.10.0",
+        "pug": "^3.0.2",
+        "underscore": "^1.13.3"
+    },
+    "devDependencies": {
+        "@types/debug": "^4.1.7",
+        "@types/joi": "^17.2.3",
+        "@types/pug": "^2.0.6",
+        "nodemon": "^2.0.16"
+    }
+}
